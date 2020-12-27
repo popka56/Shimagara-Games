@@ -1,0 +1,71 @@
+@font-face{
+    font-family: Cinzel;
+    src: url(assets/Cinzel-Regular.ttf) format('truetype');
+}
+
+h1{
+    font-family: 'Cinzel', sans-serif;
+    font-size: 20vh;
+}
+
+h2{
+    font-family: 'Cinzel', sans-serif;
+    font-size: 2rem;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    height: 100vh;
+    color: white;
+    padding: 0;
+    text-shadow: 2px 2px 25px rgb(0, 0, 0);
+    background-image: 
+      repeating-linear-gradient(
+        45deg, 
+        transparent, 
+        transparent 4rem,
+        rgb(155, 0, 0) 4rem,
+        rgb(155, 0, 0) 8rem
+      );
+    background-size: 200% 200%;
+    animation: stripes 60s linear infinite;
+      
+}
+
+footer{
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    padding: 7px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+@keyframes stripes {
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+/*Mobile support*/
+@media only screen and (max-width: 768px){
+    h1{
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    h1{
+        font-size: 2.8rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    h1{
+        font-size: 2rem;
+    }
+}
