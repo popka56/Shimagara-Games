@@ -6,3 +6,7 @@ function openNavbar() {
     x.className = "navigation";
   }
 }
+
+function scrollDown() {
+  document.getElementById("scrollDown").scrollIntoView({behavior: "smooth"});
+}
