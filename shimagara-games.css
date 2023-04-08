@@ -128,12 +128,16 @@ p{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/sea-of-blood/background.png");
 }
 
+.shrine-maidens-curse-bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/shrine-maidens-curse/01.jpg");
+}
+
 .shimagara-games-title{
     font-family: 'Cinzel', sans-serif;
     font-size: 20vh;
     margin-bottom: 0;
     text-shadow: 2px 2px 25px rgb(0, 0, 0);
-    line-height: 12rem;
+    line-height: 13rem;
 }
 
 .sea-of-blood-title{
@@ -143,6 +147,18 @@ p{
     -webkit-text-stroke-color: black;
     text-shadow: 2px 2px 25px rgb(0 0 0);
     font-weight: bolder;
+}
+
+.shrine-maidens-curse-title{
+    font-size: 8rem;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-weight: bolder;
+    line-height: 10rem;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-text {
@@ -260,6 +276,28 @@ p{
     transform: scale(1.25);
     filter: drop-shadow(0 0 0.5rem black);
     transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    .content-gallery{
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .content-gallery img{
+        width: 75%;
+        transition: 0s;
+    }
+
+    .content-gallery img:hover{
+        transition: 0s;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content-gallery img{
+        width: 100%;
+    }
 }
 
 footer{
