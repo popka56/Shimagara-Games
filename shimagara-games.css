@@ -3,6 +3,11 @@
     src: url(assets/Cinzel-Regular.ttf) format('truetype');
 }
 
+@font-face{
+    font-family: ZeroCool;
+    src: url(assets/ZeroCool.ttf) format('truetype');
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -128,12 +133,16 @@ p{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/sea-of-blood/background.png");
 }
 
+.sheepers-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/sheepers/grass.png") repeat;
+}
+
 .shimagara-games-title{
     font-family: 'Cinzel', sans-serif;
     font-size: 20vh;
     margin-bottom: 0;
     text-shadow: 2px 2px 25px rgb(0, 0, 0);
-    line-height: 12rem;
+    line-height: 13rem;
 }
 
 .sea-of-blood-title{
@@ -143,6 +152,18 @@ p{
     -webkit-text-stroke-color: black;
     text-shadow: 2px 2px 25px rgb(0 0 0);
     font-weight: bolder;
+}
+
+.sheepers-title{
+    font-size: 9rem;
+    font-family: 'ZeroCool', 'Cinzel', sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    background: -webkit-linear-gradient(#f52f60, #f2cb30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    line-height: 10rem;
 }
 
 .hero-text {
@@ -162,6 +183,7 @@ p{
 .hero-text a {
     padding: 15px;
     font-size: 25px;
+    font-weight: 700;
     border-radius: 25px;
     border-style: solid;
     border-color: black;
@@ -234,14 +256,28 @@ p{
 
 .content-project img{
     width: 100%;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .content-project img:hover{
     cursor: pointer;
     transform: scale(1.1);
     filter: drop-shadow(0 0 0.5rem black);
-    transition: 0.5s;
+    transition: 0.2s;
+}
+
+.content-updates{
+    max-width: 100%;
+}
+
+.content-updates a > img{
+    width: 15%;
+}
+
+.content-updates a > img:hover{
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 0.5rem black);
+    transition: 0.2s;
 }
 
 .content-gallery{
@@ -253,13 +289,39 @@ p{
 
 .content-gallery img{
     width: 30%;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .content-gallery img:hover{
     transform: scale(1.25);
     filter: drop-shadow(0 0 0.5rem black);
-    transition: 0.5s;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+    .content-gallery{
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .content-gallery img{
+        width: 75%;
+        transition: 0s;
+    }
+
+    .content-gallery img:hover{
+        transition: 0s;
+    }
+
+    .content-updates a > img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content-gallery img{
+        width: 100%;
+    }
 }
 
 footer{
