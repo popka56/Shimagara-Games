@@ -134,7 +134,7 @@ p{
 }
 
 .sheepers-bg{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/sheepers/grass.png") repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/sheepers/background.png");
 }
 
 .shimagara-games-title{
@@ -315,6 +315,28 @@ p{
 
     .content-updates a > img{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content-gallery img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-gallery{
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .content-gallery img{
+        width: 75%;
+        transition: 0s;
+    }
+
+    .content-gallery img:hover{
+        transition: 0s;
     }
 }
 
